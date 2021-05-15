@@ -1,41 +1,43 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 //Constructor and Destructor in inheritance in C++
 class A
 {
-    private:
+private:
     int a;
-    public:
+
+public:
     A(int k)
     {
-        a=k;
+        a = k;
     }
     void show_data_a()
     {
-        cout<<"a = "<<a<<endl;
+        cout << "a = " << a << endl;
     }
 };
 class B : public A
 {
-    private:
+private:
     int b;
-    public:
-    B(int x,int y):A(x)
+
+public:
+    B(int x, int y) : A(x)
     {
-        b=y;
+        b = y;
     }
     void show_data()
     {
         show_data_a();
-        cout<<"b = "<<b;
+        cout << "b = " << b;
     }
 };
 int main()
 {
-    int m,n;
-    cout<<"Enter any two number : ";
-    cin>>m>>n;
-    B obj(m,n);
+    int m, n;
+    cout << "Enter any two number : ";
+    cin >> m >> n;
+    B obj(m, n);
     obj.show_data();
     return 0;
 }
