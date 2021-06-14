@@ -1,16 +1,10 @@
 #include <iostream>
-#include <vector>
-#include <string>
-
+#include <cmath>
 using namespace std;
 
 int main()
 {
-    vector<string> msg {"Hello", "C++", "World", "from", "VS Code", "and the C++ extension!"};
-
-    for (const string& word : msg)
-    {
-        cout << word << " ";
-    }
+    int n = 1234567891;
+    cout << trunc(log10(n) + 1);
     cout << endl;
 }
