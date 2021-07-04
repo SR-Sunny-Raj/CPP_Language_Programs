@@ -1,27 +1,17 @@
-#include <iostream>
+#include <bits/stdc++.h>
+#define ll long long int
 using namespace std;
 int main()
 {
-    long long int t;
+    ll t;
     cin >> t;
-    long long int arr[t], temp;
-    for (long long int i = 0; i < t; i++)
+    ll arr[t];
+    for (ll i = 0; i < t; i++)
     {
         cin >> arr[i];
     }
-    for (long long int i = 0; i < t - 1; i++)
-    {
-        for (long long int j = 0; j < t - 1 - i; j++)
-        {
-            if (arr[j] > arr[j + 1])
-            {
-                temp = arr[j];
-                arr[j] = arr[j + 1];
-                arr[j + 1] = temp;
-            }
-        }
-    }
-    for (long long int i = 0; i < t; i++)
+    sort(arr, arr + t);
+    for (int i = 0; i < t; i++)
     {
         cout << arr[i] << endl;
     }
